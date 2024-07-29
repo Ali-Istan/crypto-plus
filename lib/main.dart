@@ -1,3 +1,7 @@
+import 'package:crypto_plus/Model/crypto.dart';
+import 'package:crypto_plus/Screen/coin_list_screen.dart';
+import 'package:crypto_plus/Screen/home_screen.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +19,7 @@ class _ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: SafeArea(child: Column(children: [Row()],) ),),
+      home: HomeScreen(),
     );
   }
 }
