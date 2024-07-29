@@ -15,7 +15,7 @@ class _ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: SafeArea(child: Column() ),),
+      home: Scaffold(body: SafeArea(child: Column(children: [],) ),),
     );
   }
 }
