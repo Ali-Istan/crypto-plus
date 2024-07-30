@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import '../Model/crypto.dart';
 import 'coin_list_screen.dart';
@@ -21,9 +22,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.grey[900],
         body: Center(
-          child: Text("data"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(image: AssetImage('assets/images/logo.png')),
+              SpinKitWave(
+                size: 80,
+                color: Colors.white,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -46,5 +58,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+    // Navigator.pop(context);
   }
 }
